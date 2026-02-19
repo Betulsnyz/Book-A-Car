@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookACar.WebApi", "Presentation\BookACar.WebApi\BookACar.WebApi.csproj", "{C003F85F-ACD7-4849-96EF-F35494862C89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookACar.Application", "Core\BookACar.Application\BookACar.Application.csproj", "{D60C9577-74AB-49E1-9FFD-8445DCA92119}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{C003F85F-ACD7-4849-96EF-F35494862C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C003F85F-ACD7-4849-96EF-F35494862C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C003F85F-ACD7-4849-96EF-F35494862C89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D60C9577-74AB-49E1-9FFD-8445DCA92119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D60C9577-74AB-49E1-9FFD-8445DCA92119}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D60C9577-74AB-49E1-9FFD-8445DCA92119}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D60C9577-74AB-49E1-9FFD-8445DCA92119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,7 +41,6 @@ Global
 		{6BD057E2-008B-4C98-AD38-7786CEA8D035} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{4981C051-8AB6-45D3-9330-FD2B9A2353EB} = {1BF02BCD-AD84-4AFD-80F0-C191B021EC36}
 		{C003F85F-ACD7-4849-96EF-F35494862C89} = {D6ABD58C-EA9B-4761-A7D0-73BE3BF48983}
-		{D60C9577-74AB-49E1-9FFD-8445DCA92119} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAAF1A64-A558-4855-A5E1-8289533F9AC9}
