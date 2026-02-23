@@ -6,6 +6,7 @@ using BookACar.Application.Features.CQRS.Handlers.CategoryHandlers;
 using BookACar.Application.Features.CQRS.Handlers.ContactHandlers;
 using BookACar.Application.Interfaces;
 using BookACar.Application.Interfaces.CarInterfaces;
+using BookACar.Application.Services;
 using BookACar.Persistence.Context;
 using BookACar.Persistence.Repositories;
 using BookACar.Persistence.Repositories.CarRepositories;
@@ -53,6 +54,8 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
+
+builder.Services.AddApplicationServices(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

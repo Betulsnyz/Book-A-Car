@@ -41,19 +41,19 @@ namespace BookACar.WebApi.Controllers
         public async Task<IActionResult> CreateContact(CreateContactCommand command)
         {
             await _createContactCommandHandler.Handle(command);
-            return Ok("Kategori Bilgisi Eklendi");
+            return Ok("İletişim Bilgisi Eklendi");
         }
         [HttpDelete]
         public async Task<IActionResult> RemoveContact(int id)
         {
             await _removeContactCommandHandler.Handle(new RemoveContactCommand(id));
-            return Ok("Kategori Bilgisi Silindi");
+            return Ok("İletişim Bilgisi Silindi");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateContact(UpdateContactCommand command)
         {
             await _updateContactCommandHandler.Handle(command);
-            return Ok("Kategori Bilgisi Güncellendi");
+            return Ok("İletişim Bilgisi Güncellendi");
         }
     }
 }
