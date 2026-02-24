@@ -1,0 +1,28 @@
+﻿using BookACar.Application.Features.Mediator.Commands.LocationCommands;
+using BookACar.Application.Interfaces;
+using BookACar.Domain.Entities;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BookACar.Application.Features.Mediator.Handlers.LocationHandlers
+{
+    public class RemoveLocationCommandHandler : IRequestHandler<RemoveLocationCommand>
+    {
+        private readonly IRepository<Location> _repository;
+
+        public RemoveLocationCommandHandler(IRepository<Location> repository)
+        {
+            _repository = repository;
+        }
+
+        public async Task Handle(RemoveLocationCommand request, CancellationToken cancellationToken)
+        {
+           var location = await _repository.GetByIdAsync(request.Id);
+           await _repository.RemoveAsync(location);
+        }
+    }
+}
