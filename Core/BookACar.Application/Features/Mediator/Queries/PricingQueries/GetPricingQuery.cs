@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BookACar.Application.Features.Mediator.Queries.PricingQueries
 {
-    public class GetPricingQuery :IRequest<GetPricingQueryResult>
+    public class GetPricingQuery :IRequest<List<GetPricingQueryResult>>
     {
     }
 }
