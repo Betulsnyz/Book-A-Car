@@ -21,9 +21,8 @@ namespace BookACar.Application.Features.Mediator.Handlers.FooterAddressHandlers
 
         public async Task Handle(RemoveFooterAddressCommand request, CancellationToken cancellationToken)
         {
-            await _repository.RemoveAsync(request.Id);
-
-
+            var value = await _repository.GetByIdAsync(request.Id);
+            await _repository.RemoveAsync(value);
         }
     }
 }
