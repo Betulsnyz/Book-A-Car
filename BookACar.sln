@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookACar.WebUI", "Frontends\BookACar.WebUI\BookACar.WebUI.csproj", "{816B5B88-62A6-4A58-BE17-732E563D75A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookACar.Dto", "Frontends\BookACar.Dto\BookACar.Dto.csproj", "{1093269C-5C0B-4BEE-B61F-05C62DC609D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{816B5B88-62A6-4A58-BE17-732E563D75A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{816B5B88-62A6-4A58-BE17-732E563D75A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{816B5B88-62A6-4A58-BE17-732E563D75A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1093269C-5C0B-4BEE-B61F-05C62DC609D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1093269C-5C0B-4BEE-B61F-05C62DC609D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1093269C-5C0B-4BEE-B61F-05C62DC609D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1093269C-5C0B-4BEE-B61F-05C62DC609D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{C003F85F-ACD7-4849-96EF-F35494862C89} = {D6ABD58C-EA9B-4761-A7D0-73BE3BF48983}
 		{D60C9577-74AB-49E1-9FFD-8445DCA92119} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{816B5B88-62A6-4A58-BE17-732E563D75A4} = {E286AC10-7EFD-4223-AF40-19656AC90812}
+		{1093269C-5C0B-4BEE-B61F-05C62DC609D1} = {E286AC10-7EFD-4223-AF40-19656AC90812}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAAF1A64-A558-4855-A5E1-8289533F9AC9}

@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace BookACar.Application.Features.Mediator.Handlers.LocationHandlers
 {
-    public class CreatePricingCommandHandler : IRequestHandler<CreateLocationCommand>
+    public class CreateLocationCommandHandler : IRequestHandler<CreateLocationCommand>
     {
         private readonly IRepository<Location> _repository;
 
-        public CreatePricingCommandHandler(IRepository<Location> repository)
+        public CreateLocationCommandHandler(IRepository<Location> repository)
         {
             _repository = repository;
         }
@@ -23,7 +23,7 @@ namespace BookACar.Application.Features.Mediator.Handlers.LocationHandlers
         {
             await _repository.CreateAsync(new Location
             {
-                Name = request.Name
+                Name = request.Name,                
             });
         }
     }

@@ -16,7 +16,7 @@ namespace BookACar.Application.Features.Mediator.Handlers.LocationHandlers
     {
         private readonly IRepository<Location> _repository;
 
-        public GetLocationQueryHandler(IRepository<Location> repository)
+        public GetLocationQueryHandler(IRepository<Location>repository)
         {
             _repository = repository;
         }
@@ -28,6 +28,7 @@ namespace BookACar.Application.Features.Mediator.Handlers.LocationHandlers
             {
                 LocationID = b.LocationID,
                 Name = b.Name
+                
 
             }).ToList();
         }
