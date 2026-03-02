@@ -4,11 +4,11 @@ using Newtonsoft.Json;
 
 namespace BookACar.WebUI.ViewComponents.TestimonialViewComponents
 {
-    public class _TestimonialViewComponentPartial:ViewComponent
+    public class _TestimonialComponentPartial:ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _TestimonialViewComponentPartial(IHttpClientFactory httpClientFactory)
+        public _TestimonialComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
