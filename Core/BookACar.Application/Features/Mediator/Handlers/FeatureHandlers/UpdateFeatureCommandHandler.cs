@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BookACar.Application.Features.Mediator.Handlers.FeatureHandlers
 {
-    internal class UpdateFeatureCommandHandler : IRequestHandler<UpdateFeatureCommand>
+    public class UpdateFeatureCommandHandler : IRequestHandler<UpdateFeatureCommand>
     {
         private readonly IRepository<Feature> _repository;
 
