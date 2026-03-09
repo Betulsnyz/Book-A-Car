@@ -10,5 +10,6 @@ namespace BookACar.Application.Interfaces.BlogInterfaces
     public interface IBlogRepository 
     {
         public List<Blog> GetLast3BlogsWithAuthors();
+        public List<Blog> GetAllBlogsWithAuthor();
     }
 }

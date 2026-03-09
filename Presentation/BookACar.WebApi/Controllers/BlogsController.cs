@@ -1,5 +1,6 @@
 ﻿using BookACar.Application.Features.Mediator.Commands.BlogCommands;
 using BookACar.Application.Features.Mediator.Queries.BlogQueries;
+using BookACar.Application.Features.Mediator.Results.BlogResults;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -63,5 +64,12 @@ namespace BookACar.WebApi.Controllers
             return Ok(values);
         }
         //await dediğimiz için var values a ihtiyacımız var. Eğer await demeseydik var values a ihtiyacımız olmazdı. Çünkü await dediğimiz zaman bize bir sonuç döneceği anlamına gelir. Eğer await demeseydik bize bir sonuç dönmeyeceği anlamına gelir. Bu yüzden var values a ihtiyacımız var.
+
+        [HttpGet("GetAllBlogsWithAuthorList")]
+        public async Task<IActionResult> GetAllBlogsWithAuthorList()
+        {
+            var values = await _mediator.Send(new GetAllBlogsWithAuthorQuery());
+            return Ok(values);
+        }
     }
 }
