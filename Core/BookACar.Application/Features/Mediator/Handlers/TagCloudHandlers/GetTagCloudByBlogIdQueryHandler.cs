@@ -21,13 +21,13 @@ namespace BookACar.Application.Features.Mediator.Handlers.TagCloudHandlers
 
         public async Task<List<GetTagCloudByBlogIdQueryResult>> Handle(GetTagCloudByBlogIdQuery request, CancellationToken cancellationToken)
         {
-            var value = await _repository.GetByIdAsync(request.Id);
-            return new GetTagCloudByIdQueryResult
+            var value = _repository.GetTagCloudByBlogId(request.Id);
+            return value.Select(x => new GetTagCloudByBlogIdQueryResult
             {
-                BlogID = value.BlogID,
-                TagCloudID = value.TagCloudID,
-                Title = value.Title
-            };
+                BlogID = x.BlogID,
+                TagCloudID = x.TagCloudID,
+                Title = x.Title
+            }).ToList();
         }
     }
 }
