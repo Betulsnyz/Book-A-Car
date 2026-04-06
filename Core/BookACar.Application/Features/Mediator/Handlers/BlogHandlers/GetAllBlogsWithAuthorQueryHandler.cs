@@ -31,7 +31,9 @@ namespace BookACar.Application.Features.Mediator.Handlers.BlogHandlers
                 CoverImageUrl = x.CoverImageUrl,
                 CreatedDate = x.CreatedDate,
                 CategoryID = x.CategoryID,
-                Description = x.Description
+                Description = x.Description,
+                AuthorDescription = x.Author.Description,
+                AuthorImageUrl = x.Author.ImageUrl
             }).ToList();
         }
     }

@@ -71,5 +71,11 @@ namespace BookACar.WebApi.Controllers
             var values = await _mediator.Send(new GetAllBlogsWithAuthorQuery());
             return Ok(values);
         }
+        [HttpGet("GetAuthorByBlogIdList")]
+        public async Task<IActionResult> GetAuthorByBlogIdList(int id)
+        {
+            var values = await _mediator.Send(new GetAuthorByBlogIdQuery(id));
+            return Ok(values);
+        }
     }
 }
