@@ -1,0 +1,66 @@
+﻿@model List<ResultBrandDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+
+		<!-- start page title -->
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Araba Markaları Listesi</h4>
+						<p class="card-subtitle mb-4">
+							Arabalarla İlgili Yeni Özellik Ekleme (Klima , bluetooth,audio,elektrik)çzellikler listesi, özellikler üzerinde düzenleme  ve bir özelliği kaldırma gibi işlemleri bu sayfadan üzerinden yapabilirsiniz
+						</p>
+						<div class="table-responsive">
+							@if (Model.Count > 0)
+
+							{
+								<table class="table mb-0">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Özellik</th>
+											<th>Sil</th>
+											<th>GÜncelle</th>
+										</tr>
+									</thead>
+									<tbody>
+										@foreach (var item in Model)
+										{
+											count++;
+											<tr>
+												<th scope="row">@count</th>
+												<td>@item.Name</td>
+
+												<td><a href="/AdminFeature/RemoveFeature/@item.FeatureID" class="btn btn-outline-danger">Sil</a></td>
+												<td><a href="/AdminFeature/UpdateFeature/@item.FeatureID" class="btn btn-outline-success">Güncelle</a></td>
+											</tr>
+										}
+									</tbody>
+
+								</table>
+							}
+							else
+							{
+								<div class="alert alert-info">
+									<p class="mb-0">Henüz hiçbir özellik eklenmemiş!</p>
+								</div>
+							}
+							<a href="/AdminFeature/CreateFeature/" class="btn btn-outline-primary">yeni özellik girişi</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
