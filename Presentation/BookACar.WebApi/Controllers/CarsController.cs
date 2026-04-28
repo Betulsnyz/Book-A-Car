@@ -47,7 +47,7 @@ namespace BookACar.WebApi.Controllers
             await _createCarCommandHandler.Handle(command);
             return Ok("Arava Bilgisi Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveCar(int id)
         {
             await _removeCarCommandHandler.Handle(new RemoveCarCommand(id));

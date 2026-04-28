@@ -1,7 +1,7 @@
-﻿@model CreateCarDto
+﻿@model UpdateCarDto
 @{
-	ViewData["Title"] = "CreateCar";
-	Layout = "~/Views/AdminLayout/Index.cshtml";
+    ViewData["Title"] = "UpdateCar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 <div class="page-content">
 	<div class="container-fluid">
@@ -10,10 +10,11 @@
 			<div class="col-xl-12">
 				<div class="card">
 					<div class="card-body">
-						<h4 class="card-title">Yeni Araç Girişi</h4>
-						<p class="card-subtitle mb-4">Araçİle ilgili Temel Bilgileri eksiksiz doldurmanız önemlidir . veri girişlerinden sonra butona tıklayarak işlemi tamamlayabilirsiniz.</p>
+						<h4 class="card-title">Araç Güncelleme Sayfası</h4>
+						<p class="card-subtitle mb-4">Araçİle ilgili Temel Bilgileri eksiksiz doldurmanız önemlidir . veri girişlerinden sonra butona tıklayarak güncelleme işlemini tamamlayabilirsiniz.</p>
 
-						<form asp-action="CreateCar" method="post">
+						<form asp-action="UpdateCar" method="post">
+							<input type="hidden" asp-for="CarID" />
 							<div class="form-group">
 								<label for="exampleInputBrand">Marka</label>
 								<select asp-for="BrandID" class="form-control">
@@ -72,7 +73,7 @@
 								<input type="text" class="form-control" id="exampleInputBigImage" asp-for="BigImageUrl" placeholder="Büyük kapak fotoğrafı URL'si giriniz">
 							</div>
 
-							<button type="submit" class="btn btn-primary waves-effect waves-light">Aracı Kaydet</button>
+							<button type="submit" class="btn btn-primary waves-effect waves-light">Aracı Güncelle</button>
 
 						</form>
 
@@ -82,4 +83,6 @@
 		</div>
 	</div>
 </div>
+
+
 

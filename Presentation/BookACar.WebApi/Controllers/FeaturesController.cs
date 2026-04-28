@@ -42,7 +42,7 @@ namespace BookACar.WebApi.Controllers
             return Ok("Özellik eklendi");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveFeature(int id)
         {
             await _mediator.Send(new RemoveFeatureCommand(id));
