@@ -15,7 +15,7 @@
 					<div class="card-body">
 						<h4 class="card-title">Araba Markaları Listesi</h4>
 						<p class="card-subtitle mb-4">
-							Arabalarla İlgili Yeni Özellik Ekleme (Klima , bluetooth,audio,elektrik)çzellikler listesi, özellikler üzerinde düzenleme  ve bir özelliği kaldırma gibi işlemleri bu sayfadan üzerinden yapabilirsiniz
+							Arabalarla İlgili Marka Listesi, marka üzerinde düzenleme  ve bir markayı kaldırma gibi işlemleri bu sayfadan üzerinden yapabilirsiniz
 						</p>
 						<div class="table-responsive">
 							@if (Model.Count > 0)
@@ -25,9 +25,10 @@
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Özellik</th>
+											<th>Marka Adı</th>
 											<th>Sil</th>
 											<th>GÜncelle</th>
+											<th>Markaya Ait Araçlar</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -36,10 +37,11 @@
 											count++;
 											<tr>
 												<th scope="row">@count</th>
-												<td>@item.Name</td>
+												<td>@item.name</td>
 
-												<td><a href="/AdminFeature/RemoveFeature/@item.FeatureID" class="btn btn-outline-danger">Sil</a></td>
-												<td><a href="/AdminFeature/UpdateFeature/@item.FeatureID" class="btn btn-outline-success">Güncelle</a></td>
+												<td><a href="/AdminBrand/RemoveBrand/@item.brandID" class="btn btn-outline-danger">Sil</a></td>
+												<td><a href="/AdminBrand/UpdateBrand/@item.brandID" class="btn btn-outline-success">Güncelle</a></td>
+												<td><a href="/AdminBrand/BrandCars/@item.brandID" class="btn btn-outline-success">Markaya Ait Araçlar</a></td>
 											</tr>
 										}
 									</tbody>
@@ -49,10 +51,10 @@
 							else
 							{
 								<div class="alert alert-info">
-									<p class="mb-0">Henüz hiçbir özellik eklenmemiş!</p>
+									<p class="mb-0">Henüz hiçbir marka eklenmemiş!</p>
 								</div>
 							}
-							<a href="/AdminFeature/CreateFeature/" class="btn btn-outline-primary">yeni özellik girişi</a>
+							<a href="/AdminBrand/CreateBrand/" class="btn btn-outline-primary">yeni marka girişi</a>
 						</div>
 
 					</div>
